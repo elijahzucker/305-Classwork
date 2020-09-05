@@ -1,0 +1,67 @@
+Insertion sort:
+The variance across different levels of sorted between # of swaps seems somewhat similar. Observing the behavior of the algortihim lead me to an error
+I had made where the percent sorted was having the exact opposite effect. I've checked to sorting algorithim many times so I know that sorting properly.
+This is an issue with the method that changes up a percentage of the values. The runs here are after I fixed this issue by having the percentage float defined as 1 - the %.
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 0
+# of swaps: 4938
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 20
+# of swaps: 2372
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 20
+# of swaps: 2372
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 20
+# of swaps: 2210
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 20
+# of swaps: 2351
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 20
+# of swaps: 2390
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 40
+# of swaps: 2146
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 40
+# of swaps: 2108
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 40
+# of swaps: 1812
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 40
+# of swaps: 2374
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 60
+# of swaps: 1962
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 60
+# of swaps: 1840
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 60
+# of swaps: 1845
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 60
+# of swaps: 1729
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 60
+# of swaps: 1714
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 80
+# of swaps: 1130
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 80
+# of swaps: 955
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 80
+# of swaps: 1122
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 80
+# of swaps: 1129
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 80
+# of swaps: 1146
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe IS 100 100
+# of swaps: 0
+
+Linear Search: This worked the main issue I felt initially was that the numbers were just too large for there to be any real possibility of the number i picked being in 
+the list. Because of this i used intNext(bounded) to limit the size of each element. I used the # of elements as a way to determine the bound. This has the side effect of
+elminiating negatives from the possible generated numbers. This would have been easy to fix (just adding in a chance to swap numbers to negatives) however I chose not to
+seeing as every single example in this assignment used exclusivly positive numbers. That and it dosn't change how the algorithim functions since it can handle negatives 
+anywase.
+I'm not really sure how well this preforms seeing as most of the time the targeted number isn't included. 
+
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe LS=50 20 0
+A: 99 95 89 85 78 75 72 71 61 60 45 42 41 31 28 28 26 20 19 15 
+# of entries searched: 20
+Search term: 50 has NOT been found
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe LS=50 20 0
+A: 98 84 83 82 76 75 74 69 63 59 53 49 31 27 26 24 12 12 10 9 
+# of entries searched: 20
+Search term: 50 has NOT been found
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ java analyzeMe LS=50 20 0
+A: 86 82 78 76 72 69 64 55 50 43 41 37 37 32 28 25 22 19 9 5 
+# of entries searched: 8
+Search term: 50 has been found
+elijah@ELIJAH-PC:/mnt/c/Users/ELIJAH/DOcuments/305/hw1$ 
